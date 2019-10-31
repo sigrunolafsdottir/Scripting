@@ -1,6 +1,14 @@
 from datetime import date
+from datetime import datetime
 
-d0 = date(2019, 10, 8)
-d1 = date(2019, 12, 24)
-delta = d1 - d0
+
+xmas = date(2019, 12, 24)
+now = date.today()
+delta = xmas - now
 print (delta.days)
+
+
+xmas2 = datetime(2019, 12, 24, 23, 0, 0)
+now2 = datetime.now()
+delta2 = xmas2 - now2
+print (delta2.days)
