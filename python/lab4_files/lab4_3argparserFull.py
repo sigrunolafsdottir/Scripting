@@ -8,8 +8,8 @@ import glob
 # -f "*.txt"
 parser = argparse.ArgumentParser()
 
-parser.add_argument("-d", nargs='?', default="check_string_for_empty_dir")
-parser.add_argument("-f", nargs='?', default="check_string_for_empty_filter")
+parser.add_argument("-d", nargs='?', default="check_string_for_empty_dir", required=True)
+parser.add_argument("-f", nargs='?', default="check_string_for_empty_filter", required=False)
 args = parser.parse_args()
 #default-filter
 filter = "*"
