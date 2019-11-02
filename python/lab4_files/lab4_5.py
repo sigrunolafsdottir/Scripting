@@ -45,21 +45,13 @@ print(" ")
 #kolla att dir och fil finns
 #här finns filen i destDir, vi måste byta namn
 if os.path.isdir(destDir) and os.path.isfile(destDirFile) and os.path.isfile(srcDirAndFile):   #finns redan, lägg på timestamp   
-    print("kopierar fil från ", srcDirAndFile, " till ",newFilePathExistsTS)
     copyfile(srcDirAndFile, newFilePathExistsTS)
-
 #destfolder finns men inte destfil, kopiera vanligt
 elif os.path.isdir(destDir) and os.path.isfile(srcDirAndFile):  
-    print("elif 1, verkar funka")
-    print("kopierar fil från ", srcDirAndFile, " till ",destDirFile)
     copyfile(srcDirAndFile, destDirFile)
-
 #ursprungliga filen finns, destdir måste skapas
 elif os.path.isfile(srcDirAndFile): 
-    print("elif 2")
-    print("skapar dest dir ", destDir)
     os.makedirs(destDir)
-    print("kopierar fil från ", srcDirAndFile, " till ",destDirFile)
     copyfile(srcDirAndFile, destDirFile)
 else:
     print("Den fil du angav verkar inte existera")
